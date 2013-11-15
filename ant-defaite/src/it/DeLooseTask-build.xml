@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="DeLooseTaskITBuild" default="build">
+
+    <description>DeLooseTask Integration Test Build</description>
+
+	<!-- Define Sonar tasks -->
+	<taskdef uri="antlib:org.transgalactica.ant.defaite" resource="org/transgalactica/ant/defaite/antlib.xml">
+		<!--classpath path="${sonar-ant-task.jar}" / -->
+	</taskdef>
+
+    <echo>
+    Build File : ${ant.file} 
+    Run by     : ${user.name}
+    Base Dir   : ${basedir}
+    Build Dir  : ${build}
+    Java Home  : ${java.home}
+    </echo>
+
+	<target name="build" description="Performs the Dé Loose test build tasks.">
+		<defaite:deLoose xmlns:defaite="antlib:org.transgalactica.ant.defaite" />
+    </target>
+
+</project>

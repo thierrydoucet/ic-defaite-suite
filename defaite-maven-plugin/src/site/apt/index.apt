@@ -1,0 +1,22 @@
+ ------
+ Introduction
+ ------
+ ------
+ 2009-08-24
+ ------
+
+
+Defaite Plugin
+
+  Plugin implémentant divers Mojo de defaite.
+
+* Goals Overview
+
+  * {{{lancerLeDe-mojo.html}defaite:lancerLeDe}} Lancement du dé de la Loose.
+
+  * {{{verifierDefaite-mojo.html}defaite:verifierDefaite}} Détermination de la defaite probable du build, à l'aide du dé de la Loose.
+
+* Examples
+
+  * {{{examples/autonome.html} Exécution autonome}}
+  

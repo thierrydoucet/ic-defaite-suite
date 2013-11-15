@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs id="FAQ" title="Frequently Asked Questions">
+  <part id="General">
+    <faq id="util">
+      <question>Ce plugin est il utile?</question>
+      <answer>
+        <p>
+          Bien sur! Par exemple, ajoutez à votre moteur d'intégration continue, une tache l'éxécutant tous les matins.
+          Vous pouvez aussi le configurer en standard dans vos build, si votre projet se passe trop bien, ou pour simuler l'off-shore... 
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

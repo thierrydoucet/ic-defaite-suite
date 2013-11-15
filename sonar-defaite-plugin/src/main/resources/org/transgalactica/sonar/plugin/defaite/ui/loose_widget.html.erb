@@ -1,0 +1,28 @@
+<%
+loose_measure=measure('loose_status')
+if loose_measure %>
+<div class="dashbox">
+  <p class="title"><%= message('metric.loose_status.name') -%></p>
+  <p>
+    <span class="big" id="loose_status">
+    <% if loose_measure.value == 1 %>
+		<%= widget_properties['sonar.defaite.loose_status_prefix'] + 'NO_LOOSE' %>
+	<% elsif loose_measure.value == 2 %>
+		<%= widget_properties['sonar.defaite.loose_status_prefix'] + 'LOW_LOOSE' %>
+    <% elsif loose_measure.value == 3 %>
+		<%= widget_properties['sonar.defaite.loose_status_prefix'] + 'MID_LOOSE' %>
+	<% elsif loose_measure.value == 4 %>
+		<%= widget_properties['sonar.defaite.loose_status_prefix'] + 'MEGA_LOOSE' %>
+	<% else %>
+        <%= widget_properties['sonar.defaite.loose_status_prefix'] + 'ULTIMATE_LOOSE' %>
+	<% end %>
+    </span>
+    <%= dashboard_configuration.selected_period? ? format_variation(loose_measure) : trend_icon(loose_measure) -%>
+  </p>
+</div>
+<% if loose_measure.value > 1 %>
+<div>
+      <img alt="Loose compliant" src="<%= url_for_static(:plugin => 'defaite', :path => 'loose_compliant.jpg') -%>">    
+</div>
+<% end %>
+<% end %>

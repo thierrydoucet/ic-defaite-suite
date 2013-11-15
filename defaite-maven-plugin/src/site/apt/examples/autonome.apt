@@ -1,0 +1,106 @@
+ ------
+ Exécution autonome
+ ------
+ ------
+ 2009-08-24
+ ------
+
+Ex�écution autonome de maven-defaite-plugin
+
+	Ce plugin ne nécessite pas de projet pour son éxécution. Lancer simplement une de ces commandes :
+
+* Mojo verifierDefaite
+
+** Commande
+
+----------------------------------------
+ mvn maven.plugin.defaite:maven-defaite-plugin:verifierDefaite
+----------------------------------------
+
+** Exemple d éxécution
+
+----------------------------------------
+# mvn maven.plugin.defaite:maven-defaite-plugin:verifierDefaite
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Default Project
+[INFO]    task-segment: [maven.plugin.defaite:maven-defaite-plugin:verifierDefaite] (aggregator-style)
+[INFO] ------------------------------------------------------------------------
+[INFO] [defaite:lancerLeDe]
+[INFO] Casting the Loose dice...
+[INFO] ... got: ULTIMATE_LOOSE
+[INFO] Build random defaite level is: 36%
+[INFO]
+................................
+....< LOOSE LOOSE LOOSE LOOSE >.
+................||..............
+.............__\||/____.........
+.\\.........|'-|--| \  \........
+..\\_.......|--|--|  \  \.......
+../L \____,/-------\_\   \......
+.|OOS|-------------O-----,|.....
+..\E/______,------------,/......
+..//.......\_________ ,/........
+.//.......____//___ __\\__/.....
+................................
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Damned! ULTIMATE_LOOSE make your build do defaite!
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: < 1 second
+[INFO] Finished at: Wed Aug 26 17:04:18 CEST 2009
+[INFO] Final Memory: 1M/3M
+[INFO] ------------------------------------------------------------------------
+----------------------------------------
+
+* Mojo lancerLeDe
+
+** Commande
+
+----------------------------------------
+ mvn maven.plugin.defaite:maven-defaite-plugin:lancerLeDe
+----------------------------------------
+
+** Exemple d éxécution
+
+----------------------------------------
+# mvn maven.plugin.defaite:maven-defaite-plugin:lancerLeDe
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Default Project
+[INFO]    task-segment: [maven.plugin.defaite:maven-defaite-plugin:2.0.0:lancerLeDe] (aggregator-style)
+[INFO] ------------------------------------------------------------------------
+[INFO] [defaite:lancerLeDe]
+[INFO] Casting the Loose dice...
+[INFO] ... got: LOOSE_RELOAD
+[INFO] Loose level is 'reload', casting again
+[INFO] Casting the Loose dice...
+[INFO] ... got: LOW_LOOSE
+[INFO]
+................................
+....< LOOSE LOOSE LOOSE LOOSE >.
+................||..............
+.............__\||/____.........
+.\\.........|'-|--| \  \........
+..\\_.......|--|--|  \  \.......
+../L \____,/-------\_\   \......
+.|OOS|-------------O-----,|.....
+..\E/______,------------,/......
+..//.......\_________ ,/........
+.//.......____//___ __\\__/.....
+................................
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Damned! LOW_LOOSE break the build!
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1 second
+[INFO] Finished at: Fri Dec 18 11:48:46 CET 2009
+[INFO] Final Memory: 4M/128M
+[INFO] ------------------------------------------------------------------------
+----------------------------------------
