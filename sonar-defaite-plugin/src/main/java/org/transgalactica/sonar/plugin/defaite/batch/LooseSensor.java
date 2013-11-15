@@ -16,7 +16,6 @@ import org.transgalactica.defaite.util.DeLoose;
 import org.transgalactica.sonar.plugin.defaite.LooseMetrics;
 import org.transgalactica.sonar.plugin.defaite.LoosePlugin;
 
-
 public class LooseSensor implements Sensor {
 
 	private static final Logger LOG = LoggerFactory.getLogger(LooseSensor.class);
@@ -38,17 +37,21 @@ public class LooseSensor implements Sensor {
 			LOG.info("Can't find build output directory: {}. Skipping Loose analysis.", buildOutputDir);
 			return;
 		}
+		final File reportFile = project.getFileSystem().resolvePath(
+				settings.getString(LoosePlugin.LOOSE_REPORT_FILE_PROPERTY));
+		if (!reportFile.exists()) {
+			LOG.info("Can't find Loose report file: {}. Skipping Loose analysis.", reportFile);
+			return;
+		}
 
-		DeLoose looseStatus = readLoose(project);
+		DeLoose looseStatus = readLoose(reportFile);
 		saveLoose(looseStatus, sensorContext);
 	}
 
 	/**
 	 * Read Loose Satus
 	 */
-	private DeLoose readLoose(Project project) {
-		File reportFile = project.getFileSystem().resolvePath(
-				settings.getString(LoosePlugin.LOOSE_REPORT_FILE_PROPERTY));
+	private DeLoose readLoose(File reportFile) {
 		LOG.info("Analysing Loose status from file: {}", reportFile);
 		String value;
 		try {
