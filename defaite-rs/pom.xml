@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.2.RELEASE</version>
+	</parent>
+
+	<groupId>org.transgalactica.defaite</groupId>
+	<artifactId>defaite-rs</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>Standalone defaite Rest service</name>
+	<inceptionYear>2016</inceptionYear>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.transgalactica.defaite</groupId>
+			<artifactId>defaite-utils</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
